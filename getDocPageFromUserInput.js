@@ -1,6 +1,6 @@
 // Function retrieves text input from user and calls the
 // createDocPagesArray() function. Function then calls main function
-// syncDocToSheets().
+// syncSStoDoc().
 function getDocPageFromUserInput() {
   // Function analyzes User input for page to sync
   let ui = DocumentApp.getUi();
@@ -12,10 +12,8 @@ function getDocPageFromUserInput() {
   );
 
   // Process the user's response.
-  let button = result.getSelectedButton();
   let userInput = result.getResponseText();
-
   let docPagesToSync = createDocPagesArray(userInput);
 
-  syncDocToSheets(docPagesToSync);
+  syncSStoDoc(docPagesToSync);
 }

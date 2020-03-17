@@ -1,4 +1,4 @@
-function syncDocToSheets(docPagesToSync) {
+function syncSStoDoc(docPagesToSync) {
   // Retrieve SS, Doc and initialize variables
   let body = DocumentApp.getActiveDocument().getBody();
   let tables = body.getTables(); // get all tables in the Document
