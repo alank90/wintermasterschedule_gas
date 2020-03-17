@@ -5,12 +5,10 @@
 // ====================================================================== //
 
 function onOpen() {
-  DocumentApp.getUi() 
-      .createMenu('Sync with SS')
-      .addItem('Sync Now', 'getDocPageFromUserInput')
-      .addToUi();
+  DocumentApp.getUi()
+    .createMenu("Sync with SS")
+    .addItem("Sync Now", "getDocPageFromUserInput")
+    .addToUi();
 }
 
-
- 
 // ======================= End UI Dialog JS ================================ //
