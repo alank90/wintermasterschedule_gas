@@ -15,10 +15,6 @@ function syncDocToSheets(docPagesToSync) {
     "1JvxyZziwAknEqFkKkehjablSGQradKlqJXCE4BgA5ms"
   ).getSheetByName("Master Sheet");
 
-  // Get value of last column in SS
-  let lastColumn = ss.getLastColumn();
-  let lastRow = ss.getLastRow();
-
   // Iterate thru each docPage entry the Document page and write its contents to the appropriate
   // range of SS rows.
   docPagesToSync.forEach(page => {
