@@ -15,7 +15,7 @@ function syncSStoDoc(docPagesToSync) {
     "1JvxyZziwAknEqFkKkehjablSGQradKlqJXCE4BgA5ms"
   ).getSheetByName("Master Sheet");
 
-  // Iterate thru each docPage entry the Document page and write its contents to the appropriate
+  // Iterate thru each docPage entry and write its contents to the appropriate
   // range of SS rows.
   docPagesToSync.forEach(page => {
     page--; // decrement by 1 because tables[] is indexed at 0
