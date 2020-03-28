@@ -34,7 +34,7 @@ function syncSStoDoc(docPagesToSync) {
         docCell = docRow.getCell(j);
         docCellValue = docRow.getCell(j).getText();
         Logger.log("Cell Value is: " + docCellValue);
-        
+
         ssCellRange = ss.getRange(ssRow, j + 1);
         ssCellRange.setValue(docCellValue);
       } // End for loop(j)

@@ -13,8 +13,8 @@ function getDocPageFromInputForStylings() {
 
   // Process the user's response.
   let userInput = result.getResponseText();
-  
-  // if multiple pages input, create an array from user input so we can 
+
+  // if multiple pages input, create an array from user input so we can
   // iterate thru pages and sync Doc to SS one page at a time.
   let docPagesToSync = createDocPagesArray(userInput);
 
