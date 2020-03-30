@@ -42,7 +42,7 @@ function copyDocCellAttributesToSS(docPagesToSync) {
              fontFamily: attrs[DocumentApp.Attribute.FONT_FAMILY],
              fontItalic:  attrs[DocumentApp.Attribute.ITALIC],
              fontSize: attrs[DocumentApp.Attribute.FONT_SIZE] || 8,
-        }
+        };
       
                      
         // Transfer the Document ENUM properties to the SS
