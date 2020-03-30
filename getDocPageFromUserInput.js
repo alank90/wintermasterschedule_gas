@@ -13,13 +13,8 @@ function getDocPageFromUserInput() {
 
   // Process the user's response.
   let userInput = result.getResponseText();
-<<<<<<< HEAD
   
   // if multiple pages input, create an array from user input so we can 
-=======
-
-  // if multiple pages input, create an array from user input so we can
->>>>>>> ed3fc90ad5c08a01b9eb2c9490ea1950dfef5f0f
   // iterate thru pages and sync Doc to SS one page at a time.
   let docPagesToSync = createDocPagesArray(userInput);
 

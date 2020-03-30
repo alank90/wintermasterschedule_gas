@@ -1,3 +1,7 @@
+// To use this script you must update the 'ss' variable to equal the Google Spread Sheet ID for the 
+// SS you wish to sync this Container-Bound(Google Docs) to. Also make sure the sheet name is
+// "Master Sheet". You may change this option if you like.
+
 function syncSStoDoc(docPagesToSync) {
   // Retrieve SS, Doc and initialize variables
   let body = DocumentApp.getActiveDocument().getBody();
@@ -19,13 +23,9 @@ function syncSStoDoc(docPagesToSync) {
   // range of SS rows.
   docPagesToSync.forEach(page => {
     page--; // decrement by 1 because tables[] is indexed at 0
-    Logger.log("Current page value is " + page);
     ssRow = computeStartingSSRowNumber(page); // Compute the starting Row Number for the SS section that corresponds current docPage
     let docGetNumOfRows = tables[page].getNumRows(); // get number of rows in the current DocTable Page
-    Logger.log("Number of rows in current DocPage table: " + docGetNumOfRows);
-    Logger.log("starting row for page " + ssRow);
-    Logger.log("Num of Rows " + docGetNumOfRows);
-
+   
     for (i = 0; i < docGetNumOfRows; i++) {
       docRow = tables[page].getRow(i);
       docGetNumOfCells = docRow.getNumCells();
@@ -34,11 +34,7 @@ function syncSStoDoc(docPagesToSync) {
         docCell = docRow.getCell(j);
         docCellValue = docRow.getCell(j).getText();
         Logger.log("Cell Value is: " + docCellValue);
-<<<<<<< HEAD
         
-=======
-
->>>>>>> ed3fc90ad5c08a01b9eb2c9490ea1950dfef5f0f
         ssCellRange = ss.getRange(ssRow, j + 1);
         ssCellRange.setValue(docCellValue);
       } // End for loop(j)
