@@ -31,8 +31,10 @@ function syncSStoDoc(docPagesToSync) {
       docGetNumOfCells = docRow.getNumCells();
 
       for (j = 0; j < docGetNumOfCells; j++) {
+        docCell = docRow.getCell(j);
         docCellValue = docRow.getCell(j).getText();
         Logger.log("Cell Value is: " + docCellValue);
+        
         ssCellRange = ss.getRange(ssRow, j + 1);
         ssCellRange.setValue(docCellValue);
       } // End for loop(j)
@@ -40,5 +42,5 @@ function syncSStoDoc(docPagesToSync) {
       // Increment SS row value
       ssRow++; // Increment SS row number
     } // End for loop(i)
-  }); // End forEach(pageNumber) array loop
+  }); // End forEach(page) array loop
 } //  End syncDocToSheet() Function

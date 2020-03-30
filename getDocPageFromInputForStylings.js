@@ -1,13 +1,13 @@
 // Function retrieves text input from user and calls the
-// createDocPagesArray() function. Function then calls main function
-// syncSStoDoc().
-function getDocPageFromUserInput() {
-  // Function analyzes User input for page to sync
+// createDocPagesArray() function. Function then calls function
+// copyDocCellAttributes(docPageNumber).
+function getDocPageFromInputForStylings() {
+  // Function analyzes User input for page(s) to sync stylings
   let ui = DocumentApp.getUi();
 
   let result = ui.prompt(
-    "Sync Google Spread Sheet with Google Doc",
-    "Please enter comma separated page(s) to Sync (e.g. 1,3,4) :",
+    "Sync Your Google Docs Page(s) Styles with related Google Spread Sheet",
+    "Please enter comma separated page(s) to Sync Styles(e.g. 1,3,4) :",
     ui.ButtonSet.OK_CANCEL
   );
 
@@ -18,5 +18,5 @@ function getDocPageFromUserInput() {
   // iterate thru pages and sync Doc to SS one page at a time.
   let docPagesToSync = createDocPagesArray(userInput);
 
-  syncSStoDoc(docPagesToSync);
+  copyDocCellAttributesToSS(docPagesToSync);
 }

@@ -7,7 +7,8 @@
 function onOpen() {
   DocumentApp.getUi()
     .createMenu("Sync with SS")
-    .addItem("Sync Now", "getDocPageFromUserInput")
+    .addItem("Sync Data Now", "getDocPageFromUserInput")
+    .addItem("Sync Styles Now", "getDocPageFromInputForStylings")
     .addToUi();
 }
 
